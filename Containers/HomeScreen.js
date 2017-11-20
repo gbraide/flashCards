@@ -5,7 +5,12 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Home Screen!</Text>
+        <Text>flashCards</Text>
+        <Text
+          style={styles.linky}
+          onPress={() => this.props.navigation.navigate('drawerStack')} >
+          Lets dive in!
+        </Text>
       </View>
     )
   }
@@ -18,4 +23,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  linky: {
+    color: 'blue',
+    paddingTop: 10
+  }
 })
